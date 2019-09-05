@@ -1,0 +1,97 @@
+:root{
+    --color-1:rgb(0, 204, 255);
+    --color-2:#f8f9fa;
+    --color-main:#ff487e;
+    --color-secondary:#ff9776;
+    --color-supplementary-1:#ffd5be;
+    --color-supplementary-2:#ffedff;  
+}
+{
+--color-main:#232931;
+--color-secondary: #393E46;
+--color-supplementary-1:#4ECCA3;
+--color-supplementary-2:#EEEEEE;
+}
+.box{
+    position: absolute;
+    display:inline-block;
+    height: 100%;
+    width: 50%;
+    
+}
+.container.watchContainer{
+    margin: 0;
+    
+    padding: 0;
+}
+.box.box-1{
+    background-color:var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box.box-2 {
+    background-color:var(--color-2);
+    display: flex;
+    margin-left: 50%;
+}
+.headingName{
+    font-size: 4em;
+    font-family:'Times New Roman', Times, serif;
+}
+.vw{
+    color:var(--color-supplementary-2);
+
+}
+
+.design{
+    border-radius: 25px;
+    border:13px solid var(--color-secondary);
+    background:var(--color-main);
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin: auto;  
+  }
+
+.timeLockScreen{
+    margin-top: -40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color:var(--color-supplementary-2);
+    padding-left: 30px;
+}
+.timeLockScreen.meridiem{
+    font-size: 10px;
+    color: var(--color-supplementary-2);
+    padding-left:0px;
+}
+.textNotification{
+    color: var(--color-supplementary-1);
+    font-size: 12px;
+    padding-left: 50px;
+    padding-top: 8px;
+}
+.header{
+    col-md-
+    align-content: space-between;
+    position: relative;
+    
+}
+.backButton{
+    color:blueviolet;
+    align-content:flex-start;
+    padding-top:-25px;
+    font: 15px;
+}
+.timer{
+    color: var(--color-supplementary-2);
+    font-size: 15px;
+    align-content:flex-end;
+
+}
