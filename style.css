@@ -1,23 +1,17 @@
+
 :root{
     --color-1:rgb(0, 204, 255);
     --color-2:#f8f9fa;
-    --color-main:#ff487e;
-    --color-secondary:#ff9776;
+    --color-main:#000000;
+    --color-secondary:#ef4b4b;
     --color-supplementary-1:#ffd5be;
     --color-supplementary-2:#ffedff;  
-}
-{
---color-main:#232931;
---color-secondary: #393E46;
---color-supplementary-1:#4ECCA3;
---color-supplementary-2:#EEEEEE;
 }
 .box{
     position: absolute;
     display:inline-block;
     height: 100%;
-    width: 50%;
-    
+    width: 50%;    
 }
 .container.watchContainer{
     margin: 0;
@@ -43,28 +37,12 @@
     color:var(--color-supplementary-2);
 
 }
-
-.design{
-    border-radius: 25px;
-    border:13px solid var(--color-secondary);
-    background:var(--color-main);
-    display: block;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; 
-    position: relative;
-    width: 200px;
-    height: 150px;
-    margin: auto;  
-  }
-
-.timeLockScreen{
-    margin-top: -40px;
-    justify-content: center;
-    align-items: center;
+.timeLockScreen {
+    display: inline-block;
     font-size: 30px;
-    color:var(--color-supplementary-2);
-    padding-left: 30px;
+    color: var(--color-supplementary-2);
+    padding-left: 20px;
+    margin: 25px 0 5px
 }
 .timeLockScreen.meridiem{
     font-size: 10px;
@@ -74,11 +52,9 @@
 .textNotification{
     color: var(--color-supplementary-1);
     font-size: 12px;
-    padding-left: 50px;
-    padding-top: 8px;
+    padding-left: 20px;
 }
 .header{
-    col-md-
     align-content: space-between;
     position: relative;
     
@@ -93,5 +69,106 @@
     color: var(--color-supplementary-2);
     font-size: 15px;
     align-content:flex-end;
+
+}
+.smartWatchContainer{
+    display: flex;
+    align-items: center;
+}
+.mainScreen{
+    position: relative;
+    margin-top: -12px;
+    border:13px solid var(--color-secondary);
+    width: 145px;
+    height: 166px;
+    background:var(--color-main);
+    border-radius: 31px;
+}
+.mainScreen::after {
+    position: absolute;
+    content: " ";
+    height: 115%;
+    width: 100%;
+    /* margin: 1%; */
+    background-color: var(--color-secondary);
+    border-radius: 25px;
+    bottom:-165px;
+}
+.mainScreen::before {
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 100%;
+    /* margin: 1%; */
+    background-color: var(--color-secondary);
+    border-radius: 25px;
+    top:-143px;
+}
+
+.backButton{
+    color: aqua;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 4%;
+    cursor: pointer;
+}
+.time{
+    color: var(--color-supplementary-2);
+    font-size: 15px;
+    padding: 5px;
+    margin-left: auto;
+}
+.textTitle{
+    font-size: 15px;
+    color: var(--color-supplementary-2);
+}
+.textDescription{
+    font-size: 12px;
+    color: var(--color-supplementary-1);
+    margin-left: 7px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.removeEllipsis{
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+}
+.textBorder {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px;
+    padding: 2px;
+}
+.msgBox{
+    height: 70%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.msgScreen{
+    
+    position: relative;
+    margin-top: -12px;
+    border:13px solid var(--color-secondary);
+    width: 145px;
+    height: 166px;
+    background:var(--color-main);
+    border-radius: 31px;
+}
+
+.screen1 {
+    display: block;
+    height: 100%;
+}
+.screen2, .screen3, .screen4{
+    display: none;
+    height: 100%;
+}
+.msgCont{
+    margin-bottom: 10px;
+    
 
 }
