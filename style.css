@@ -121,6 +121,7 @@
 .textTitle{
     font-size: 15px;
     color: var(--color-supplementary-2);
+    cursor: pointer;
 }
 .textDescription{
     font-size: 12px;
@@ -147,6 +148,10 @@
     overflow-x: hidden;
     overflow-y: scroll;
 }
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
 
 .msgScreen{
     
@@ -169,6 +174,28 @@
 }
 .msgCont{
     margin-bottom: 10px;
-    
+    margin-left: 3px;
+    border-radius: 8px;
+    background-color: #4f54517d;
+}
+
+.icon{
+    position: relative;
+    width:50px;
+    height: 50px;
+    color: blue;
+    padding: 1px;
+    margin: 25%;
+    margin-bottom: 7px;
+}
+.icon.envelope{
+    display: inline-block;
+}
+
+.icon.clock{
+    display: inline-block;
+}
+.iconAlignment{
+    margin-top: 30%;
 
 }

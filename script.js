@@ -30,6 +30,47 @@ this.start = function(){
       running = false; 
       
       }
+
+      const message = [
+        { name: "Barbie",description:" I'm a Barbie girl in barbie world"},
+        { name: "john cena ",description:" You can't see me,bcz my name is john cena."},
+        { name: "Arya Strak",description:" not today : these words are said by arya to night king"},
+
+    ];
+
+    let i=0;
+    let messageName="";
+    let messageDescription="";
+    for (i = 0; i < message.length; i++) {
+
+      messageName= message[i].name;
+      messageDescription=message[i].description;
+      document.getElementsByClassName("textTitle")[i].innerHTML=messageName;
+      document.getElementsByClassName("textDescription")[i].innerHTML=messageDescription;
+      console.log(messageName);
+      console.log(messageDescription);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  //   document.getElementsByClassName
+  //   $(".screen1").click(function(){
+
+  //     let hey=
+  //     $(".textTitle").append(message.name);
+
+  //   $(".textTitle").append("hey");
+  //   console.log(hey);
+  // });
       
 //hinding the lock screen and displaying the messageinbox
 $(".screen1").click(function () {
@@ -51,7 +92,6 @@ $(".screen2").show();
 //       You ca0n't see me,bcz my name is john cena.
 //   </div>
 // </div>
-
 // <div class="msgCont">
 //   <div class="textTitle">
 //       Arya Stark
