@@ -73,9 +73,25 @@ this.start = function(){
   // });
       
 //hinding the lock screen and displaying the messageinbox
-$(".screen1").click(function () {
-$(this).hide();
+
+$(".textNotification").click(function () {
+$(".screen1").hide();
 $(".screen2").show();
+});
+
+$(".music").click(function () {
+  $(".screen1").hide();
+ 
+  });
+
+
+  $(".envelope").click(function () {
+    $(".screen1").hide();
+    $(".screen2").show();
+    });
+    
+  
+
 //   var op = `<div class="msgCont">
 //   <div class="textTitle">
 //       Barbie
@@ -103,7 +119,7 @@ $(".screen2").show();
 //   $("#root").append(op);
 // let op = '';
 // op += `<div class="name">`+arr.name+'</div><div class="txt">'+arr.xt+`</div>`;
-});
+
 
 $(".backButtonJs").click(function () {
 if($(this).closest('.screen2').hasClass("open")) {

@@ -1,11 +1,11 @@
 
 :root{
     --color-1:rgb(0, 204, 255);
-    --color-2:#f8f9fa;
+    --color-2:#0f1010;
     --color-main:#000000;
-    --color-secondary:#ef4b4b;
-    --color-supplementary-1:#ffd5be;
-    --color-supplementary-2:#ffedff;  
+    --color-secondary:#f7ecec;
+    --color-supplementary-1:#10bb28;
+    --color-supplementary-2:#f5eef5;  
 }
 .box{
     position: absolute;
@@ -42,7 +42,7 @@
     font-size: 30px;
     color: var(--color-supplementary-2);
     padding-left: 20px;
-    margin: 25px 0 5px
+    margin: 20px 5px 5px;
 }
 .timeLockScreen.meridiem{
     font-size: 10px;
@@ -52,7 +52,8 @@
 .textNotification{
     color: var(--color-supplementary-1);
     font-size: 12px;
-    padding-left: 20px;
+    padding-left: 40px;
+    padding-bottom:10px;
 }
 .header{
     align-content: space-between;
@@ -87,12 +88,12 @@
 .mainScreen::after {
     position: absolute;
     content: " ";
-    height: 115%;
+    height: 110%;
     width: 100%;
     /* margin: 1%; */
     background-color: var(--color-secondary);
     border-radius: 25px;
-    bottom:-165px;
+    bottom:-155px;
 }
 .mainScreen::before {
     position: absolute;
@@ -179,23 +180,43 @@
     background-color: #4f54517d;
 }
 
-.icon{
-    position: relative;
+.music{
+    display:flex;
+    align-content: space-between;
+    width:50px;
+    /* position: absolute; */
+    height: 50px;
+    color: #da17cd;
+    padding: 1px;
+    /* margin-left: 25px;
+    margin-bottom:5px; */
+}
+.envelope{
+    display:flex;
+    align-content: space-between;
+    width:50px;
+    /* position:absolute; */
+    height: 50px;
+    color: #14dc66;
+    /* padding: 1px;
+    margin-left: 60px;
+    margin-bottom:5px;
+ */
+}
+
+
+.clock{
+    display:flex;
+    align-content: space-between;
     width:50px;
     height: 50px;
-    color: blue;
-    padding: 1px;
-    margin: 25%;
-    margin-bottom: 7px;
-}
-.icon.envelope{
-    display: inline-block;
+    color: #b7b7c5;
+    /* padding: 1px; */
+    /* margin-left:95px; */
 }
 
-.icon.clock{
-    display: inline-block;
-}
-.iconAlignment{
-    margin-top: 30%;
-
+.icon{
+    display:flex;
+    align-content: space-between;
+    margin-left: 7px;
 }
