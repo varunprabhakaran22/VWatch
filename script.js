@@ -47,31 +47,14 @@ this.start = function(){
       messageDescription=message[i].description;
       document.getElementsByClassName("textTitle")[i].innerHTML=messageName;
       document.getElementsByClassName("textDescription")[i].innerHTML=messageDescription;
+    
+
       console.log(messageName);
-      console.log(messageDescription);
+       console.log(messageDescription);
     }
 
 
 
-
-
-
-
-
-
-
-
-
-  //   document.getElementsByClassName
-  //   $(".screen1").click(function(){
-
-  //     let hey=
-  //     $(".textTitle").append(message.name);
-
-  //   $(".textTitle").append("hey");
-  //   console.log(hey);
-  // });
-      
 //hinding the lock screen and displaying the messageinbox
 
 $(".textNotification").click(function () {
@@ -79,17 +62,39 @@ $(".screen1").hide();
 $(".screen2").show();
 });
 
+$(".envelope").click(function () {
+$(".screen1").hide();
+$(".screen2").show();
+});
+
+
 $(".music").click(function () {
-  $(".screen1").hide();
- 
-  });
+$(".screen1").hide();
+$(".screen3").show();
+});
 
 
-  $(".envelope").click(function () {
-    $(".screen1").hide();
-    $(".screen2").show();
-    });
-    
+
+
+
+$(".backButtonJs").click(function () {
+if($(this).closest('.screen2').hasClass("open")) {
+  // alert('Yes');
+  $(".msgBox").find(".msgCont").children(".textDescription").removeClass("removeEllipsis");
+  $(".msgBox").find(".msgCont").show();
+  $(".screen2").removeClass('open');
+} else {
+  // alert('No');
+  $(".screen2").hide();
+  $(".screen1").show();  
+}
+});
+
+$('.msgCont').click(function () {
+$(".screen2").addClass('open');
+$(this).siblings().hide();
+$(this).children(".textDescription").addClass('removeEllipsis');
+});
   
 
 //   var op = `<div class="msgCont">
@@ -120,22 +125,3 @@ $(".music").click(function () {
 // let op = '';
 // op += `<div class="name">`+arr.name+'</div><div class="txt">'+arr.xt+`</div>`;
 
-
-$(".backButtonJs").click(function () {
-if($(this).closest('.screen2').hasClass("open")) {
-  // alert('Yes');
-  $(".msgBox").find(".msgCont").children(".textDescription").removeClass("removeEllipsis");
-  $(".msgBox").find(".msgCont").show();
-  $(".screen2").removeClass('open');
-} else {
-  // alert('No');
-  $(".screen2").hide();
-  $(".screen1").show();  
-}
-});
-
-$('.msgCont').click(function () {
-$(".screen2").addClass('open');
-$(this).siblings().hide();
-$(this).children(".textDescription").addClass('removeEllipsis');
-});
