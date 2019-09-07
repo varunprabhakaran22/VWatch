@@ -74,9 +74,6 @@ $(".screen3").show();
 });
 
 
-
-
-
 $(".backButtonJs").click(function () {
 if($(this).closest('.screen2').hasClass("open")) {
   // alert('Yes');
@@ -125,3 +122,17 @@ $(this).children(".textDescription").addClass('removeEllipsis');
 // let op = '';
 // op += `<div class="name">`+arr.name+'</div><div class="txt">'+arr.xt+`</div>`;
 
+
+function getTime(){
+  let date=new Date()
+  let time = date.getHours();
+  let minute=date.getMinutes();
+  if(minute<10){
+      minute='0'+minute;
+  } 
+  time=time +":"+minute;
+  
+  document.getElementsByClassName("timeLockScreen")[0].innerHTML=time;
+  document.getElementsByClassName("col time")[0].innerHTML=time;
+  }
+  
