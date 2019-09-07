@@ -1,58 +1,39 @@
-function StopWatch(){
-
-  var startTime = null; 
-  var stopTime = null; 
-  var running = false; 
-}
-
-function getTime(){
-  var day = new Date();
-  return day.getTime();
-}
-
-this.start = function(){ 
-
-  if (running == true)
-      return;
-  else if (startTime != null) 
-      stopTime = null; 
-  
-  running = true;    
-  startTime = getTime();
-  
-  }
-  this.stop = function(){ 
-
-      if (running == false)
-          return;    
-      
-      stopTime = getTime();
-      running = false; 
-      
-      }
-
-      const message = [
+const message = [
         { name: "Barbie",description:" I'm a Barbie girl in barbie world"},
         { name: "john cena ",description:" You can't see me,bcz my name is john cena."},
         { name: "Arya Strak",description:" not today : these words are said by arya to night king"},
 
     ];
 
-    let i=0;
-    let messageName="";
-    let messageDescription="";
-    for (i = 0; i < message.length; i++) {
+let i=0;
+let messageName="";
+let messageDescription="";
+for (i = 0; i < message.length; i++) {
 
-      messageName= message[i].name;
-      messageDescription=message[i].description;
-      document.getElementsByClassName("textTitle")[i].innerHTML=messageName;
-      document.getElementsByClassName("textDescription")[i].innerHTML=messageDescription;
-    
+messageName= message[i].name;
+messageDescription=message[i].description;
+document.getElementsByClassName("textTitle")[i].innerHTML=messageName;
+document.getElementsByClassName("textDescription")[i].innerHTML=messageDescription;
 
-      console.log(messageName);
-       console.log(messageDescription);
-    }
 
+console.log(messageName);
+console.log(messageDescription);
+}
+
+//for displaying the time
+
+function getTime(){
+  let date=new Date()
+  let time = date.getHours();
+  let minute=date.getMinutes();
+  if(minute<10){
+      minute='0'+minute;
+  } 
+  time=time +":"+minute;
+  
+  document.getElementsByClassName("timeLockScreen")[0].innerHTML=time;
+  document.getElementsByClassName("col time")[0].innerHTML=time;
+  }
 
 
 //hinding the lock screen and displaying the messageinbox
@@ -62,6 +43,7 @@ $(".screen1").hide();
 $(".screen2").show();
 });
 
+//expanding the message inbox
 $(".envelope").click(function () {
 $(".screen1").hide();
 $(".screen2").show();
@@ -92,47 +74,4 @@ $(".screen2").addClass('open');
 $(this).siblings().hide();
 $(this).children(".textDescription").addClass('removeEllipsis');
 });
-  
-
-//   var op = `<div class="msgCont">
-//   <div class="textTitle">
-//       Barbie
-//   </div> 
-//   <div  class="textDescription">
-//       I'm a Barbie girl in a Barbie world
-//   </div>
-// </div>
-// <div class="msgCont">
-//   <div class="textTitle">
-//       John Cena
-//   </div> 
-//   <div  class="textDescription">
-//       You ca0n't see me,bcz my name is john cena.
-//   </div>
-// </div>
-// <div class="msgCont">
-//   <div class="textTitle">
-//       Arya Stark
-//   </div> 
-//   <div  class="textDescription">
-//       Not today.
-//   </div>
-// </div>`;
-//   $("#root").append(op);
-// let op = '';
-// op += `<div class="name">`+arr.name+'</div><div class="txt">'+arr.xt+`</div>`;
-
-
-function getTime(){
-  let date=new Date()
-  let time = date.getHours();
-  let minute=date.getMinutes();
-  if(minute<10){
-      minute='0'+minute;
-  } 
-  time=time +":"+minute;
-  
-  document.getElementsByClassName("timeLockScreen")[0].innerHTML=time;
-  document.getElementsByClassName("col time")[0].innerHTML=time;
-  }
-  
+    
