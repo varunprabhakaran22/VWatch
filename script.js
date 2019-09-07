@@ -14,27 +14,7 @@ messageName= message[i].name;
 messageDescription=message[i].description;
 document.getElementsByClassName("textTitle")[i].innerHTML=messageName;
 document.getElementsByClassName("textDescription")[i].innerHTML=messageDescription;
-
-
-console.log(messageName);
-console.log(messageDescription);
 }
-
-//for displaying the time
-
-function getTime(){
-  let date=new Date()
-  let time = date.getHours();
-  let minute=date.getMinutes();
-  if(minute<10){
-      minute='0'+minute;
-  } 
-  time=time +":"+minute;
-  
-  document.getElementsByClassName("timeLockScreen")[0].innerHTML=time;
-  document.getElementsByClassName("col time")[0].innerHTML=time;
-  }
-
 
 //hinding the lock screen and displaying the messageinbox
 
@@ -55,7 +35,7 @@ $(".screen1").hide();
 $(".screen3").show();
 });
 
-
+// backto previous step
 $(".backButtonJs").click(function () {
 if($(this).closest('.screen2').hasClass("open")) {
   // alert('Yes');
@@ -75,3 +55,17 @@ $(this).siblings().hide();
 $(this).children(".textDescription").addClass('removeEllipsis');
 });
     
+//for displaying the time
+
+function getTime(){
+  let date=new Date()
+  let time = date.getHours();
+  let minute=date.getMinutes();
+  if(minute<10){
+      minute='0'+minute;
+  } 
+  time=time +":"+minute;
+  
+  document.getElementsByClassName("timeLockScreen")[0].innerHTML=time;
+  document.getElementsByClassName("col time")[0].innerHTML=time;
+  }
