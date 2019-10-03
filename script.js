@@ -1,3 +1,5 @@
+let time;
+
 const message = [
         { name: "Barbie",description:" I'm a Barbie girl in barbie world"},
         { name: "john cena ",description:" You can't see me,bcz my name is john cena."},
@@ -19,20 +21,22 @@ document.getElementsByClassName("textDescription")[i].innerHTML=messageDescripti
 //hinding the lock screen and displaying the messageinbox
 
 $(".textNotification").click(function () {
-$(".screen1").hide();
-$(".screen2").show();
+  $(".screen1").hide();
+  $(".screen2").show();
+  document.getElementsByClassName("time")[0].innerHTML=time;
 });
 
 //expanding the message inbox
 $(".envelope").click(function () {
-$(".screen1").hide();
-$(".screen2").show();
+  $(".screen1").hide();
+  $(".screen3").hide();
+  $(".screen2").show();
 });
 
-
 $(".music").click(function () {
-$(".screen1").hide();
-$(".screen3").show();
+  $(".screen1").hide();
+  $(".screen2").hide();
+  $(".screen3").show();
 });
 
 // backto previous step
@@ -45,6 +49,7 @@ if($(this).closest('.screen2').hasClass("open")) {
 } else {
   // alert('No');
   $(".screen2").hide();
+  $(".screen3").hide();
   $(".screen1").show();  
 }
 });
@@ -59,7 +64,7 @@ $(this).children(".textDescription").addClass('removeEllipsis');
 
 function getTime(){
   let date=new Date()
-  let time = date.getHours();
+  time = date.getHours();
   let minute=date.getMinutes();
   if(minute<10){
       minute='0'+minute;
@@ -67,5 +72,6 @@ function getTime(){
   time=time +":"+minute;
   
   document.getElementsByClassName("timeLockScreen")[0].innerHTML=time;
-  document.getElementsByClassName("col time")[0].innerHTML=time;
+  $(".time").text(time);
+
   }

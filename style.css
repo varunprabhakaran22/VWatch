@@ -1,12 +1,16 @@
 
 :root{
     --color-1:#00ccff;
-    --color-2:#853b43;
+    --color-2:#fff;
     --color-main:#000000;
-    --color-secondary:#f7ecec;
+    --color-secondary:#424242;
     --color-supplementary-1:#10bb28;
     --color-supplementary-2:#f5eef5;  
 }
+.spaceBetween{
+    justify-content: space-between;
+}
+
 .box{
     position: absolute;
     display:inline-block;
@@ -38,11 +42,12 @@
 
 }
 .timeLockScreen {
-    display: inline-block;
-    font-size: 30px;
+    display: block;
+    font-size: 46px;
     color: var(--color-supplementary-2);
-    padding-left: 25px;
-    margin: 20px 5px 5px;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 46px;
 }
 .timeLockScreen.meridiem{
     font-size: 10px;
@@ -51,9 +56,9 @@
 }
 .textNotification{
     color: var(--color-supplementary-1);
-    font-size: 12px;
-    padding-left: 40px;
-    padding-bottom:10px;
+    font-size: 16px;
+    text-align: center;
+    display: block;
 }
 .header{
     align-content: space-between;
@@ -80,58 +85,63 @@
     position: relative;
     margin-top: -12px;
     border:13px solid var(--color-secondary);
-    width: 145px;
-    height: 166px;
+    width: 250px;
+    height: 230px;
     background:var(--color-main);
     border-radius: 31px;
 }
+
 .mainScreen::after {
     position: absolute;
     content: " ";
     height: 110%;
     width: 100%;
-    /* margin: 1%; */
+    margin: 1%;
     background-color: var(--color-secondary);
     border-radius: 25px;
-    bottom:-155px;
+    bottom:-240px;
 }
+
 .mainScreen::before {
     position: absolute;
     content: " ";
     height: 100%;
     width: 100%;
-    /* margin: 1%; */
+    margin: 1%;
     background-color: var(--color-secondary);
     border-radius: 25px;
-    top:-143px;
-}
+    top:-219px;
+} 
 
 .backButton{
     color: aqua;
     font-size: 15px;
-    padding: 5px;
+    padding-left: 15px;
     margin-left: 4%;
     cursor: pointer;
 }
 .time{
     color: var(--color-supplementary-2);
     font-size: 15px;
-    padding: 5px;
-    margin-left: auto;
+    padding-right:20px;
+    margin-right: 10px;
 }
 .textTitle{
     font-size: 15px;
     color: var(--color-supplementary-1);
     cursor: pointer;
+    padding-left: 4px;
 }
 .textDescription{
     font-size: 12px;
     color: var(--color-supplementary-1);
     margin-left: 7px;
     max-width: 100%;
+    min-height: 30px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-left: 6px;
 }
 .removeEllipsis{
     white-space: unset;
@@ -182,51 +192,27 @@
     background-color:#38403b94;
 }
 
-.music{
-    /* display:flex; */
-    align-content: space-between;
-    width:50px;
-    /* position: absolute; */
-    height: 50px;
-    color: #da17cd;
-    padding: 1px;
-    /* margin-left: 25px;
-    margin-bottom:5px; */
-}
-.envelope{
-    /* display:flex; */
-    align-content: space-between;
-    width:50px;
-    /* position:absolute; */
-    height: 50px;
-    color: #14dc66;
-    /* padding: 1px;
-    margin-left: 60px;
-    margin-bottom:5px;
- */
-}
-
-
-.clock{
-    /* display:flex; */
-    align-content: space-between;
-    width:50px;
-    height: 50px;
-    color: #b7b7c5;
-    /* padding: 1px; */
-    /* margin-left:95px; */
+.music, .envelope, .clock{
+    color: #FFF;
+    font-size: 16px;
+    margin: 0 15px;
+    cursor: pointer;
 }
 
 .icon{
-    display:flex;
-    /* align-content: space-between; */
-    margin-left: 7px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
 }
 .spotify{
     position: absolute;
-    width: 115px;
-    height: 70%;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    width: 220px;
+    margin-top: 15px;
+    overflow-x: hidden;
+    overflow-y: hidden;
     border-radius: 15px;
+}
+.spotify iframe{
+    width: 100%;
 }
