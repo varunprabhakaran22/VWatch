@@ -2,10 +2,10 @@
 :root{
     --color-1:#00ccff;
     --color-2:#fff;
-    --color-main:#000000;
-    --color-secondary:#424242;
-    --color-supplementary-1:#10bb28;
-    --color-supplementary-2:#f5eef5;  
+    --color-main:#ca3e6b;
+    --color-secondary:#fa8383;
+    --color-supplementary-1:#f4aeba;
+    --color-supplementary-2:#ffffff;  
 }
 .spaceBetween{
     justify-content: space-between;
@@ -94,23 +94,23 @@
 .mainScreen::after {
     position: absolute;
     content: " ";
-    height: 110%;
-    width: 100%;
-    margin: 1%;
+    height: 109%;
+    width: 75%;
+    margin-left: 26px;
     background-color: var(--color-secondary);
-    border-radius: 25px;
-    bottom:-240px;
+    border-radius: 12px;
+    bottom: -232px;
 }
 
 .mainScreen::before {
     position: absolute;
     content: " ";
     height: 100%;
-    width: 100%;
-    margin: 1%;
+    width: 75%;
+    margin-left: 26px;
     background-color: var(--color-secondary);
-    border-radius: 25px;
-    top:-219px;
+    border-radius: 12px;
+    top:-212px;
 } 
 
 .backButton{

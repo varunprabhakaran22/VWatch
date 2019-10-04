@@ -1,4 +1,10 @@
 let time;
+let h1 = document.getElementsByTagName('h1')[0]
+let start = document.getElementById('start')
+let stop = document.getElementById('stop')
+let clear = document.getElementById('clear')
+let seconds = 0, minutes = 0, hours = 0
+let t
 
 const message = [
         { name: "Barbie",description:" I'm a Barbie girl in barbie world"},
@@ -55,9 +61,9 @@ if($(this).closest('.screen2').hasClass("open")) {
 });
 
 $('.msgCont').click(function () {
-$(".screen2").addClass('open');
-$(this).siblings().hide();
-$(this).children(".textDescription").addClass('removeEllipsis');
+  $(".screen2").addClass('open');
+  $(this).siblings().hide();
+  $(this).children(".textDescription").addClass('removeEllipsis');
 });
     
 //for displaying the time
@@ -73,5 +79,40 @@ function getTime(){
   
   document.getElementsByClassName("timeLockScreen")[0].innerHTML=time;
   $(".time").text(time);
+}
 
-  }
+
+
+
+// function add() {
+//   seconds++;
+//   if (seconds >= 60) {
+//       seconds = 0;
+//       minutes++;
+//       if (minutes >= 60) {
+//           minutes = 0;
+//           hours++;
+//       }
+//   }
+//   h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+//   timer();
+// }
+// function timer() {
+//     t = setTimeout(add, 1000);
+// }
+// timer();
+
+// /* Start button */
+// start.onclick = timer;
+
+// /* Stop button */
+// stop.onclick = function() {
+//   clearTimeout(t);
+// }
+
+// /* Clear button */
+// clear.onclick = function() {
+//   h1.textContent = "00:00:00";
+//   seconds = 0; minutes = 0; hours = 0;
+// }
