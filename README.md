@@ -3,5 +3,5 @@
   
  # Getting started
  ## how to use
-   The procedure is complex-free and the UI is user-friendly
+      The procedure is complex-free and the UI is user-friendly
 Step1: The first display is the homepage, it comprises of all the features like the time display, messages, music player and timer
