@@ -94,23 +94,23 @@
 .mainScreen::after {
     position: absolute;
     content: " ";
-    height: 109%;
+    height: 85%;
     width: 75%;
     margin-left: 26px;
     background-color: var(--color-secondary);
     border-radius: 12px;
-    bottom: -232px;
+    bottom: -180px;
 }
 
 .mainScreen::before {
     position: absolute;
     content: " ";
-    height: 100%;
+    height: 79%;
     width: 75%;
     margin-left: 26px;
     background-color: var(--color-secondary);
     border-radius: 12px;
-    top:-212px;
+    top:-170px;
 } 
 
 .backButton{
