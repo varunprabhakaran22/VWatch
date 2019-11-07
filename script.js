@@ -1,3 +1,9 @@
+const message = [
+  { name: "Barbie",description:" I'm a Barbie girl in barbie world"},
+  { name: "john cena ",description:" You can't see me,bcz my name is john cena."},
+  { name: "Arya Stark",description:" not today : these words are said by arya to night king"},
+];
+
 let time;
 let h2 = document.getElementsByTagName('h2')[0]
 let start = document.getElementById('start')
@@ -5,25 +11,18 @@ let stop = document.getElementById('stop')
 let clear = document.getElementById('clear')
 let seconds = 0, minutes = 0, hours = 0
 let t
-
-
-
-const message = [
-        { name: "Barbie",description:" I'm a Barbie girl in barbie world"},
-        { name: "john cena ",description:" You can't see me,bcz my name is john cena."},
-        { name: "Arya Strak",description:" not today : these words are said by arya to night king"},
-
-    ];
-
 let i=0;
 let messageName="";
 let messageDescription="";
-for (i = 0; i < message.length; i++) {
 
-messageName= message[i].name;
-messageDescription=message[i].description;
-document.getElementsByClassName("textTitle")[i].innerHTML=messageName;
-document.getElementsByClassName("textDescription")[i].innerHTML=messageDescription;
+getTime();
+
+
+for (i = 0; i < message.length; i++) {
+  messageName= message[i].name;
+  messageDescription=message[i].description;
+  document.getElementsByClassName("textTitle")[i].innerHTML=messageName;
+  document.getElementsByClassName("textDescription")[i].innerHTML=messageDescription;
 }
 
 //hinding the lock screen and displaying the messageinbox
@@ -91,16 +90,15 @@ function getTime(){
       minute='0'+minute;
   } 
   time=time +":"+minute;
-  
   document.getElementsByClassName("timeLockScreen")[0].innerHTML=time;
   $(".time").text(time);
 }
 
 
 
-$("#start").click(function () {
-  add()
-});
+// $("#start").click(function () {
+//   add()
+// });
 
 
 
