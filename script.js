@@ -8,9 +8,6 @@ let t
 
 
 
-
-
-
 const message = [
         { name: "Barbie",description:" I'm a Barbie girl in barbie world"},
         { name: "john cena ",description:" You can't see me,bcz my name is john cena."},
@@ -98,6 +95,12 @@ function getTime(){
   document.getElementsByClassName("timeLockScreen")[0].innerHTML=time;
   $(".time").text(time);
 }
+
+
+
+$("#start").click(function () {
+  add()
+});
 
 
 
