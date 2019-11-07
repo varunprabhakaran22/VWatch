@@ -19,5 +19,3 @@ Step 3: Listen to music from Spotify, by just clicking the music icon in the hom
 ![Spotify](images/spotify.png)
 
 
-# Author
- VARUN
