@@ -1,10 +1,15 @@
 let time;
-let h1 = document.getElementsByTagName('h1')[0]
+let h2 = document.getElementsByTagName('h2')[0]
 let start = document.getElementById('start')
 let stop = document.getElementById('stop')
 let clear = document.getElementById('clear')
 let seconds = 0, minutes = 0, hours = 0
 let t
+
+
+
+
+
 
 const message = [
         { name: "Barbie",description:" I'm a Barbie girl in barbie world"},
@@ -36,14 +41,26 @@ $(".textNotification").click(function () {
 $(".envelope").click(function () {
   $(".screen1").hide();
   $(".screen3").hide();
+  $(".screen4").hide();
   $(".screen2").show();
 });
 
 $(".music").click(function () {
   $(".screen1").hide();
   $(".screen2").hide();
+  $(".screen4").hide();
   $(".screen3").show();
 });
+
+$(".clock").click(function () {
+  $(".screen1").hide();
+  $(".screen2").hide();
+  $(".screen3").hide();
+  $(".screen4").show();
+});
+
+
+
 
 // backto previous step
 $(".backButtonJs").click(function () {
@@ -56,6 +73,7 @@ if($(this).closest('.screen2').hasClass("open")) {
   // alert('No');
   $(".screen2").hide();
   $(".screen3").hide();
+  $(".screen4").hide();
   $(".screen1").show();  
 }
 });
@@ -94,7 +112,7 @@ function add() {
           hours++;
       }
   }
-  h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+  h2.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
 
   timer();
 }
@@ -104,16 +122,16 @@ function timer() {
 timer();
 
 
-// /* Start button */
-// start.onclick = timer;
+/* Start button */
+start.onclick = timer;
 
-// /* Stop button */
-// stop.onclick = function() {
-//   clearTimeout(t);
-// }
+/* Stop button */
+stop.onclick = function() {
+  clearTimeout(t);
+}
 
-// /* Clear button */
-// clear.onclick = function() {
-//   h1.textContent = "00:00:00";
-//   seconds = 0; minutes = 0; hours = 0;
-// }
+/* Clear button */
+clear.onclick = function() {
+  h2.textContent = "00:00:00";
+  seconds = 0; minutes = 0; hours = 0;
+}
